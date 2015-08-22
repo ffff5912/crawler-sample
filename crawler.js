@@ -28,8 +28,10 @@ var saveAction = function(err, res, body) {
 };
 
 var Crawler = {
-    execute: function(target) {
-        Request(target, saveAction);
+    execute: function(targets) {
+        targets.map(function(target) {
+            Request(target, saveAction);
+        });
     }
 }
 

@@ -1,6 +1,6 @@
 'use strict';
 
 var Crawler = require('./crawler.js');
-var requestUrl = 'http://example.com/';
+var targets = require('./parameters/targets.js');
 
-Crawler.execute(requestUrl);
+Crawler.execute(targets);
