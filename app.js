@@ -1,6 +1,6 @@
 'use strict';
 
 var Crawler = require('./crawler.js');
-var targets = require('./parameters/targets.js');
+var seeds = require('./parameters/seeds.js');
 
-Crawler.execute(targets);
+Crawler.execute(seeds);
