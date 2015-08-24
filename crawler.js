@@ -35,7 +35,7 @@ var scraping = function(err, res, body) {
         var data = {
             url: res.request.href,
             title: $('title').text(),
-            body: $('body').html()
+            body: $('body').html().replace(/<\/?br>|\n|\t|\r/g, '').replace(/<script.*?>.*?<\/script>/g, '')
         };
         save(data);
     } else {
